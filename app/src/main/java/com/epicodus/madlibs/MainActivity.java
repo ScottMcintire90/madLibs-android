@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button mSubmitButton;
     private Button mScaryButton;
+    private Button mLoveButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +69,26 @@ public class MainActivity extends AppCompatActivity {
                 String animal = mAnimal.getText().toString();
 
                 Intent intent = new Intent(MainActivity.this, ScaryActivity.class);
+                intent.putExtra("noun", noun);
+                intent.putExtra("name", name);
+                intent.putExtra("number", number);
+                intent.putExtra("verb", verb);
+                intent.putExtra("animal", animal);
+                startActivity(intent);
+            }
+        });
+
+        mLoveButton = (Button) findViewById(R.id.loveButton);
+        mLoveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String noun = mNoun.getText().toString();
+                String name = mName.getText().toString();
+                String number = mNumber.getText().toString();
+                String verb = mVerb.getText().toString();
+                String animal = mAnimal.getText().toString();
+
+                Intent intent = new Intent(MainActivity.this, LoveActivity.class);
                 intent.putExtra("noun", noun);
                 intent.putExtra("name", name);
                 intent.putExtra("number", number);
