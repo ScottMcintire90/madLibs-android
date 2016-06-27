@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MadLibs</string>
+    <string name="Justin">Justin</string>
+    <string name="Scott">Scott</string>
 </resources>
